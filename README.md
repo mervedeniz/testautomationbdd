@@ -13,7 +13,7 @@ Specified tests can be triggered with following commands:
 mvn test -Dcucumber.options="--tags @smoke
 ```
 
-Specified tests with specified browser can be triggred with following commmands:
+Specified tests with specified browser can be triggered with following commmands:
 ```bash
 mvn test -Dcucumber.options="--tags @smoke" -Dbrowser="chrome"
 ```
@@ -27,4 +27,13 @@ Supported browser:
 
 
 ## Generating the Report
+After the test execution you can generate Clucumber Test Report by executing following mvn command.
+```bash
+mvn cluecumber-report:reporting
+```
+
+Example report:
+![screenshot](/images/MicrosoftTeams-image.png)
+
+
 

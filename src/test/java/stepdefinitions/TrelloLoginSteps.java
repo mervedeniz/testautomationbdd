@@ -10,15 +10,15 @@ import org.openqa.selenium.WebElement;
 public class TrelloLoginSteps {
 
     private void pause(int second) {
-        try{
+        try {
             Thread.sleep(second * 1000);
-        }catch(InterruptedException ignore) {
+        } catch (InterruptedException ignore) {
             // do nothing
         }
     }
 
     @Given("^User goes to the Trello home page$")
-    public void user_goes_to_the_Trello_home_page()  {
+    public void user_goes_to_the_Trello_home_page() {
         Hooks.driver().get("https://trello.com");
     }
 
@@ -55,5 +55,16 @@ public class TrelloLoginSteps {
         WebElement pageBanner = Hooks.driver().findElement(loc_page_banner);
         boolean isVisible = pageBanner.isDisplayed();
         Assert.assertTrue(isVisible);
+    }
+
+    @When("^User logins with invalid credentials$")
+    public void user_logins_with_invalid_credentials() {
+        
+    }
+
+    @Then("^user should be able to see an error message$")
+    public void user_should_be_able_to_see_an_error_message() {
+     
+
     }
 }

@@ -1,5 +1,7 @@
 
 Feature: Trello login functionality
+
+  @deniz
   Scenario: User can login to Trello with valid credentials
     Given User goes to the Trello home page
     And User clicks on login link
